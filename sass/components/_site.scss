@@ -1,0 +1,28 @@
+@use "../mixins/page";
+
+.site {
+    &-header {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: var(--spc) 0;
+    }
+
+    &-content {
+        padding: var(--spc-lg) 0;
+
+        .page-title {
+            border-bottom: .0625em solid var(--clr-muted);
+            margin-bottom: 1em;
+        }
+    }
+
+    &-footer {
+        padding: var(--spc-lg) 0;
+
+        p {
+            color: var(--clr-dimmed);
+            text-align: center;
+        }
+    }
+}

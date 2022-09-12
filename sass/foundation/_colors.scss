@@ -1,0 +1,5 @@
+@use '../mixins/gradient';
+
+.gradient-text {
+    @include gradient.text;
+}

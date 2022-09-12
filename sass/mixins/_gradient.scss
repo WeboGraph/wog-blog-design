@@ -1,0 +1,10 @@
+@mixin background {
+    background-image: var(--gradient);
+}
+
+@mixin text {
+    @include background;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}

@@ -1,0 +1,27 @@
+@use "../mixins/gradient";
+
+.logo {
+    @include gradient.background;
+    display: inline-block;
+    padding: calc(var(--spc) / 2) var(--spc);
+    position: relative;
+    isolation: isolate;
+    z-index: 0;
+
+    &::before {
+        background-color: var(--clr-bg);
+        content: ' ';
+        inset: calc(var(--spc) / 4);
+        position: absolute;
+        z-index: 1;
+    }
+
+    a {
+        @include gradient.text;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 2rem;
+        position: relative;
+        z-index: 2;
+    }
+}
